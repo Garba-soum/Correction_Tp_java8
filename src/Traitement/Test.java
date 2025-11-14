@@ -35,23 +35,28 @@ public class Test {
 		employe.add(employe3);
 		employe.add(employe4); 
 		
-		/*
-		 * System.out.println(employe);
-		 * 
-		 * List<Employe> res1 = employe.stream() .filter(e -> e.getSalaire() > 3000)
-		 * .collect(Collectors.toList()); res1.forEach(System.out :: println);
-		 */
 		
-		/*
-		 * List<Employe> res2 = employe.stream() .sorted(Comparator.comparing(Employe ::
-		 * getDateEmbauche)) .collect(Collectors.toList()); res2.forEach(System.out ::
-		 * println);
-		 */
+		  System.out.println(employe);
+		  
+		  List<Employe> res1 = employe.stream()
+				  .filter(e -> e.getSalaire() > 3000)
+				  .collect(Collectors.toList()); 
+		  res1.forEach(System.out :: println);
+		 
 		
-		/*
-		 * List<String> res3 = employe.stream() .map(Employe :: getNom)
-		 * .collect(Collectors.toList()); res3.forEach(System.out :: println);
-		 */
+		
+		  List<Employe> res2 = employe.stream() 
+				  .sorted(Comparator.comparing(Employe :: getDateEmbauche)) 
+				  .collect(Collectors.toList()); 
+		  res2.forEach(System.out ::println);
+		 
+		
+		
+		  List<String> res3 = employe.stream() 
+				  .map(Employe :: getNom)
+				  .collect(Collectors.toList()); 
+		  res3.forEach(System.out :: println);
+		 
 		
 		Employe res4 = employe.stream()
 				.max(Comparator.comparing(Employe :: getSalaire))
